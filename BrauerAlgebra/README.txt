@@ -11,6 +11,8 @@ The proofs for the traceless projector algorithm used in this package can be fou
 
 Via the xBrauer companion package, BrauerAlgebra is link to the xAct (xTensor) bundle for tensorial calculus (José M. Martin-Garcia, GPL 2002-2022) which is widely used in theoretical physics. http://www.xAct.es/
 
+This package needs the SymmetricFunctions package to work properly.
+
 Author: Thomas Helpin. Affilated to the Institut Denis Poisson (France).
 
 
