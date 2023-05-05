@@ -439,13 +439,6 @@ WeingartenO[btab]==WeingartenO[btab,\!\(\*SubscriptBox[\(\[Delta]\), \(b\)]\)]."
 
 
 (******************** At the end we delete the citation from the Names **************************)
-(*Unprotect[Names];
-Names["xAct`BrauerAlgebra`*"]=mycomplementSmall[Names["xAct`BrauerAlgebra`*"],
-{"BrauerciteCollins06","BrauerciteJanusz66","BrauerciteKing16","BrauercitePuchala17","BrauerciteShalile13","BrauerDocumentationReplacements",
-"BrauerDOIToString","doi","text","BrauerciteCox09","BrauerciteNazarov96","BrauerciteRobinson61","BrauerciteRui05","BrauerciteSamra79",
-"mycomplementSmall","BrauerciteBrauer1937","BrauerciteWillenbring07","BrauerciteJucys74","BrauerciteMurphy81","BrauerciteFulton96",
-"BrauerciteMacDonald95","BrauerciteBrown56","BrauerciteCollins09","BrauerciteRam95","BrauerciteShalile11","BrauerciteDoty19"}]
-Protect[Names];*)
 Remove["BrauerciteCollins06","BrauerciteJanusz66","BrauerciteKing16","BrauercitePuchala17","BrauerciteShalile13","BrauerDocumentationReplacements",
 "BrauerDOIToString","doi","text","BrauerciteCox09","BrauerciteNazarov96","BrauerciteRobinson61","BrauerciteRui05","BrauerciteSamra79","BrauerciteBrauer1937","BrauerciteWillenbring07","BrauerciteJucys74","BrauerciteMurphy81","BrauerciteFulton96",
 "BrauerciteMacDonald95","BrauerciteBrown56","BrauerciteCollins09","BrauerciteRam95","BrauerciteShalile11","BrauerciteDoty19","BrauerciteBulgakova22"]
