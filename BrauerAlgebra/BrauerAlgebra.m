@@ -20,7 +20,7 @@
 
 
 (* ::Input::Initialization:: *)
-xAct`BrauerAlgebra`$Version={"1.0.0",{2023,24,02}}
+BrauerAlgebra`$Version={"1.0.0",{2023,24,02}}
 
 
 (* ::Input::Initialization:: *)
@@ -68,12 +68,12 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 (* ::Input::Initialization:: *)
 Off[General::nostdvar]
 Off[General::nostdopt]
-BeginPackage["xAct`BrauerAlgebra`",{"xAct`SymmetricFunctions`"}]
+BeginPackage["BrauerAlgebra`",{"SymmetricFunctions`"}]
 
 
 (* ::Input::Initialization:: *)
 Print["------------------------------------------------------------"];
-Print["xAct`BrauerAlgebra  version ",$Version[[1]],", ",$Version[[2]]];
+Print["BrauerAlgebra  version ",$Version[[1]],", ",$Version[[2]]];
 Print["Copyright (C) 2020-2022, Thomas Helpin, under the General Public License."];
 
 
@@ -111,6 +111,7 @@ BrauerciteCollins06=BrauerDOIToString["[Collins&\:015aniady 2006]","10.1007/s002
 BrauerciteCollins09=BrauerDOIToString["[Collins&Matsumoto 2009]","10.1063/1.3251304"];
 BrauerciteDoty19=BrauerDOIToString["[Doty&Lauve&Seelinger 2019]","10.4171/LEM/64-1/2-2"];
 BrauerciteBulgakova22=BrauerDOIToString["[Bulgakova&Goncharov&Helpin 2022]","10.48550/arXiv.2212.14496"];
+
 
 
 (* ::Input::Initialization:: *)
@@ -438,7 +439,7 @@ WeingartenO[btab]==WeingartenO[btab,\!\(\*SubscriptBox[\(\[Delta]\), \(b\)]\)]."
 (* To do *)
 
 
-(******************** At the end we delete the citation from the Names **************************)
+(******************** We remove the citation and related function **************************)
 Remove["BrauerciteCollins06","BrauerciteJanusz66","BrauerciteKing16","BrauercitePuchala17","BrauerciteShalile13","BrauerDocumentationReplacements",
 "BrauerDOIToString","doi","text","BrauerciteCox09","BrauerciteNazarov96","BrauerciteRobinson61","BrauerciteRui05","BrauerciteSamra79","BrauerciteBrauer1937","BrauerciteWillenbring07","BrauerciteJucys74","BrauerciteMurphy81","BrauerciteFulton96",
 "BrauerciteMacDonald95","BrauerciteBrown56","BrauerciteCollins09","BrauerciteRam95","BrauerciteShalile11","BrauerciteDoty19","BrauerciteBulgakova22"]
@@ -560,11 +561,11 @@ ToBrauerCycles[exp_]:=exp/.x:BrauerList[list_]:>ToBrauerCycles1[x]
 
 (* ::Input::Initialization:: *)
 (************* ToBrauerList *********************)
-ComplementaryCycle[list_]:=ChangeInteger[RotateLeft[list]]
+ComplementaryCycle[list_]:=BrauerAlgebra`Private`ChangeInteger[RotateLeft[list]]
 CycleAsBrauerList[list_]:=Sort/@Thread[{list,ComplementaryCycle[list]}]
 CyclesAsBrauerList[x:{list__}]:=Join@@Map[CycleAsBrauerList,x]
 ToBrauerList0[BrauerCycles[{}],n_]:=IdentityBrauer[n];
-ToBrauerList0[BrauerCycles[list__],n_]:=With[{comp=mycomplementSmall[Range[n],UpInteger[Flatten[list]]]},BrauerList[Sort[Join[Thread[{comp,DownInteger[comp]}],CyclesAsBrauerList[list]]]]]
+ToBrauerList0[BrauerCycles[list__],n_]:=With[{comp=mycomplementSmall[Range[n],BrauerAlgebra`Private`UpInteger[Flatten[list]]]},BrauerList[Sort[Join[Thread[{comp,DownInteger[comp]}],CyclesAsBrauerList[list]]]]]
 
 
 (* ::Input::Initialization:: *)
@@ -2366,7 +2367,7 @@ ruleProductAClass=ConjugacyClassRelations[AClass[n,1],dim,SymmetricGroup->False]
 If[n\[Mu]!=n,Throw@Message[CentralIdempotentBranching::partition,\[Mu],n]];
 spec\[Lambda]=DeleteCases[spec\[Lambda],ev];
 lev=Last[spec\[Lambda]];
-previousCentralIdempotent=ArcMergingFunction[CentralIdempotent[n-2,f-1,\[Lambda],dim]];
+previousCentralIdempotent=BrauerAlgebra`Private`ArcMergingFunction[CentralIdempotent[n-2,f-1,\[Lambda],dim]];
 AtimespreviousCentralIdempotent=Collect[Expand[Times[Aclass,previousCentralIdempotent]]/.ruleProductAClass,{_Bracelets},Factor];
 factors=Join[{Collect[previousCentralIdempotent-AtimespreviousCentralIdempotent/(lev),{_Bracelets},Factor]},Map[1-1/#*Aclass&,Most[spec\[Lambda]]]];
 normalization=1/ev*Product[spec\[Lambda][[i]]/(spec\[Lambda][[i]]-ev),{i,1,Length[spec\[Lambda]]}];
