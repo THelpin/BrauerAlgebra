@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   3749523,      92040]
+NotebookDataLength[   3749543,      92041]
 NotebookOptionsPosition[   3695895,      91200]
-NotebookOutlinePosition[   3696530,      91221]
-CellTagsIndexPosition[   3696487,      91218]
+NotebookOutlinePosition[   3696550,      91222]
+CellTagsIndexPosition[   3696507,      91219]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -91199,7 +91199,8 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowToolbars->{},
-WindowSize->{1440., 749.25},
+Evaluator->"Local",
+WindowSize->{1440., 746.25},
 WindowMargins->{{0, Automatic}, {Automatic, 27.75}},
 SpellingDictionaries->{"CorrectWords"->{
  "Contorsion", "Palatini", "Metricity", "Galileon", "Disformation", 
@@ -91237,11 +91238,11 @@ Cell[38242, 591, 7245, 104, 22, "Print",ExpressionUUID->"68cb4260-9022-40d9-81b8
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[45536, 701, 236, 4, 28, "Input",ExpressionUUID->"7220bf18-e245-47af-b773-6bd98b1253fe"],
-Cell[45775, 707, 2819, 48, 121, "Output",ExpressionUUID->"067c5b8c-6b47-453e-98bb-8436bcd3d53d"]
+Cell[45775, 707, 2819, 48, 108, "Output",ExpressionUUID->"067c5b8c-6b47-453e-98bb-8436bcd3d53d"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[48631, 760, 257, 5, 28, "Input",ExpressionUUID->"b1586a1f-b908-4f48-86ef-5cf31b044b27"],
-Cell[48891, 767, 5311, 81, 177, "Output",ExpressionUUID->"8c6d8042-e549-4e8c-a171-388ad9018f8b"]
+Cell[48891, 767, 5311, 81, 164, "Output",ExpressionUUID->"8c6d8042-e549-4e8c-a171-388ad9018f8b"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
