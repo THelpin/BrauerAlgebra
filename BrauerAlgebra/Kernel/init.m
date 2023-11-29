@@ -1,3 +1,3 @@
 (* ::Package:: *)
 
-Get["BrauerAlgebra/BrauerAlgebra.m"]
+Get["xAct/BrauerAlgebra/BrauerAlgebra.m"]
