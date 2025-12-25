@@ -32,42 +32,45 @@ installation in the variables $BaseDirectory and $UserBaseDirectory.
 You need the Applications/ subdirectory (or subfolder) of those
 returned by those variables.
 
+For Wolfram Language versions before 14.1 use Mathematica instead of
+Wolfram in the following links.
+
 Linux:
 
    - system-wide installation (requires root priviledges):
 
-        /usr/share/Mathematica/Applications/
+        /usr/share/Wolfram/Applications/
 
    - single-user installation:
 
-        $HOME/.Mathematica/Applications/
+        $HOME/.Wolfram/Applications/
 
 Mac OS:
 
    - system-wide installation (requires root priviledges):
 
-        /Library/Mathematica/Applications/
+        /Library/Wolfram/Applications/
 
    - single-user installation:
 
-        /Users/<user>/Library/Mathematica/Applications/
+        /Users/<user>/Library/Wolfram/Applications/
 
 MSWindows:
 
    - system-wide installation:
 
-	C:\Program Files\Wolfram Research\Mathematica\<version>\AddOns\Applications\
+	C:\Program Files\Wolfram Research\Wolfram\<version>\AddOns\Applications\
 
    - single-user installation:
 
-	C:\Users\<user>\AppData\Roaming\Mathematica\Applications\
+	C:\Users\<user>\AppData\Roaming\Wolfram\Applications\
 
    Beware that in Windows these directories might be hidden!
 
 
 Documentation files and exemples (like Tutorial_BrauerAlgebra.nb, etc) are placed in the BrauerAlgebra/Documentation directory.
 
-Then the packages can be loaded using unix style
+The packages can be loaded using unix style
 
         <<BrauerAlgebra/BrauerAlgebra.m
 
